@@ -1,0 +1,42 @@
+@media(max-width:450px) {
+    #header {
+        padding: 1rem;
+    }
+    #header-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .logo-image {
+        margin-right: 5%;
+    }
+    #about-us {
+        padding: 1rem;
+    }
+    #info-title {
+        margin-bottom: 1rem;
+    }
+    .paragraph-row {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    .info-description {
+        width: 80%;
+    }
+    #lessions {
+        padding: 1rem;
+    }
+    .lession-calculator {
+        width: 100%;
+    }
+}
+@media(max-width:380px) {
+    .calculator-title {
+        font-size: 1.8rem;
+    }
+    .calculator-variables {
+        width: 90%;
+    }
+    .calulator-buttons {
+        gap: 0rem;
+    }
+}
