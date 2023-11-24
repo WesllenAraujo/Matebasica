@@ -46,11 +46,15 @@ Updates log:
 
 Update 1.0 (20/11/2023): Added the project's code root.
 
-Last update: 1.0v 20/11/2023.
+Update 1.1 (24/11/2023): Added responsivity and a mobile error was solved.
+
+Last update: 1.1v 24/11/2023.
 
 Registro de atualização:
 
 Atualização 1.0 (20/11/2023): Adicionado o código raíz do projeto.
 
-Última atualização: 1.0v 20/11/2023.
+Atualização 1.1 (24/11/2023): Adicionado a responsividade e um erro do mobile foi resolvido.
+
+Última atualização: 1.1v 24/11/2023.
 
