@@ -48,7 +48,9 @@ Update 1.0 (20/11/2023): Added the project's code root.
 
 Update 1.1 (24/11/2023): Added responsivity and a mobile error was solved.
 
-Last update: 1.1v 24/11/2023.
+Update 1.2 (07/11/2023): Solved conflict issue, change logo image, update README.md.
+
+Last update: 1.2v 07/02/2024.
 
 Registro de atualização:
 
@@ -56,5 +58,7 @@ Atualização 1.0 (20/11/2023): Adicionado o código raíz do projeto.
 
 Atualização 1.1 (24/11/2023): Adicionado a responsividade e um erro do mobile foi resolvido.
 
-Última atualização: 1.1v 24/11/2023.
+Atualização 1.2 (07/02/2024): Resolvido problema de conflito, mudar logo, atualizar README.md.
+
+Última atualização: 1.2v 07/02/2024.
 
