@@ -1,7 +1,9 @@
 function variables() {
     let lessionsList = document.querySelectorAll('.lession');
+    let lessionMenu = document.querySelectorAll('.lession-menu-row');
     let lessionsCalculatorArea = document.querySelectorAll('.lession-calculator');
     let lessionMenuButtonsList = document.querySelectorAll('.lession-menu-button');
+    let lessionMenuButtonImage = document.querySelectorAll('.lession-menu-button-image');
     let bhaskaraResult = document.querySelectorAll(".bhaskara-result");
     let aBhaskara = document.querySelector('.bhaskara-a-number').value;
     let bBhaskara = document.querySelector('.bhaskara-b-number').value;
@@ -14,23 +16,27 @@ function variables() {
     let x1 = [(-1 * bBhaskara) + deltaSquareRoot] / 2;
     let x2 = [(-1 * bBhaskara) - deltaSquareRoot] / 2;
     
-    return { bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2, resultButtonList , resetButtonList,  bhaskaraCalculatorArea, lessionMenuButtonsList, lessionsList, lessionsCalculatorArea };
+    return { bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2, resultButtonList , resetButtonList,  bhaskaraCalculatorArea, lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsList, lessionsCalculatorArea };
 }
 
-var { lessionMenuButtonsList, lessionsCalculatorArea, resetButtonList, bhaskaraCalculatorArea, bhaskaraResult, resultButtonList } = variables();
+var { lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsCalculatorArea, resetButtonList, bhaskaraCalculatorArea, bhaskaraResult, resultButtonList } = variables();
 
 for (let i = 0; i < lessionsCalculatorArea.length; i++) {
     lessionsCalculatorArea[i].style.display = 'none';
-    
+    lessionMenuButtonImage.src = "./src/images/plus-icon.png";
 }
 for (let i2 = 0; i2 < lessionMenuButtonsList.length; i2++) {
     lessionMenuButtonsList[i2].addEventListener('click', function showCalculator() {
         if (lessionsCalculatorArea[i2].style.display === 'none') {
             lessionsCalculatorArea[i2].style.display = 'flex';
-            lessionMenuButtonsList[i2].innerText = '-';
+            lessionMenuButtonImage[i2].src = "./src/images/minus-icon.png";
+            lessionMenu[i2].style.borderBottomLeftRadius = "0";
+            lessionMenu[i2].style.borderBottomRightRadius = "0";
         } else {
             lessionsCalculatorArea[i2].style.display = 'none';
-            lessionMenuButtonsList[i2].innerText = '+';
+            lessionMenuButtonImage[i2].src = "./src/images/plus-icon.png";
+            lessionMenu[i2].style.borderBottomLeftRadius = "15px";
+            lessionMenu[i2].style.borderBottomRightRadius = "15px";
         }
     })
 }

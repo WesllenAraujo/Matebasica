@@ -1,13 +1,21 @@
+:root {
+    --cor-principal: #191d32;
+    --cor-secundaria: #282f44;
+    --cor-terciaria: #453a49;
+    --cor-quartenaria: #9eb3c2;
+    --cor-quinalia: #b7c0ee;
+}
 body {
-    background-color: #484848;
-    color: #fff;
+    color: var(--cor-quartenaria);
+    background-color: var(--cor-principal);
 }
 #header {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 2rem;
-    border-bottom: solid 2px rgb(223, 156, 10);
+    color: var(--cor-quinalia);
+    border-bottom: solid 2px var(--cor-quinalia);
 }
 #header-menu {
     display: flex;
@@ -18,11 +26,11 @@ body {
     transition: .2s ease-in-out;
 }
 .header-menu-item:hover {
-    color: rgb(171, 167, 167);
-    text-decoration: underline solid 1px rgb(223, 156, 10);
+    color: #a0a9d7;
+    text-decoration: underline solid 1px;
 }
 .logo-image {
-    width: 4rem;
+    width: 6rem;
 }
 #about-us {
     padding: 1%;
@@ -30,20 +38,23 @@ body {
 .paragraph-row {
     margin-top: 1%;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10%;
 }
-#info-title {
+.titles {
     font-size: 3rem;
     display: block;
-    text-decoration: underline rgb(223, 156, 10);
+    text-decoration: 3px solid underline var(--cor-quinalia);
 }
 .info-description {
     width: 40%;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
-#lessions {
+#lessions-group {
     margin-top: 2rem;
+    padding: 1%;
+}
+.lessions {
     padding: 1%;
     display: flex;
     flex-wrap: wrap;
@@ -55,29 +66,38 @@ body {
     display: flex;
     gap: 1.5rem;
     padding: .5rem;
-    background-color: #8584849c;
+    background-color: var(--cor-quartenaria);
     width: 13rem;
+    border-radius: 15px;
+    color: var(--cor-principal);
+    align-items: center;
 }
 .lession-menu-button {
-    font-size: 1.5rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
-    color: #000;
+    align-items: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-quartenaria);
     font-weight: 700;
-    width: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: .2s ease-in-out;
-    border-radius: .5rem;
+    border-radius: 50%;
 }
 .lession-menu-button:hover {
-    background-color: rgb(138, 137, 137);
+    background-color: #0a0d1b;
     color: #fff;
+}
+.lession-menu-button-image {
+    width: 2rem;
 }
 .lession-calculator {
     display: none;
     flex-direction: column;
-    background-color: #8584849c;
+    color: var(--cor-principal);
+    background-color: var(--cor-quartenaria);
     padding: 1rem;
     font-size: 1.3rem;
     width: 23rem;
@@ -94,18 +114,19 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    color: #000;
 }
 .variable {
     padding: .2rem;
     border-radius: .5rem;
+    color: var(--cor-principal);
 }
 .calculator-buttons {
     display: flex;
     gap: 2rem;
 }
 .calculator-button {
-    background-color: rgb(73, 73, 73);
+    background-color: var(--cor-principal);
+    color: var(--cor-quartenaria);
     padding: .5rem;
     font-weight: 700;
     cursor: pointer;
@@ -113,7 +134,7 @@ body {
     transition: .2s ease-in-out;
 }
 .calculator-button:hover {
-    background-color: rgb(40, 39, 39);
+    background-color: #0b0d1b;
 }
 .calculator-result {
     margin-top: 1rem;
@@ -122,5 +143,5 @@ body {
     display: none;
     flex-direction: column;
     row-gap: 1rem;
-    background-color: #8584849c;
+    background-color: var(--cor-quartenaria);
 }
