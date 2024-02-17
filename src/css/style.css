@@ -16,6 +16,7 @@ body {
     margin-bottom: 2rem;
     color: var(--cor-quinalia);
     border-bottom: solid 2px var(--cor-quinalia);
+    padding: 1rem;
 }
 #header-menu {
     display: flex;
