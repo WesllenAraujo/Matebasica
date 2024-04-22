@@ -168,7 +168,7 @@ resultButtonList.forEach((button, i) => {
                             arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + ${(finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
                             break;
                         case 4:
-                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `${parseInt(firstNumberArithmeticProgression) + (finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
+                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${parseInt(firstNumberArithmeticProgression) + (finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
                             break;
                     }
                 }

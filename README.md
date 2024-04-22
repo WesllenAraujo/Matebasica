@@ -40,6 +40,8 @@ Ajustes no index.html. Ajustes no style.css. Ajustes no main.js. Atualização R
 #### Versão 1.4 (22/04/2024):
 Ajustes no index.html, style.css e main.js. Adicionado fórmula de cálculo de P.A.(Progressão Aritmética). Atualizar README.md.
 
+#### Versão 1.5 (22/04/2024):
+Ajustes no main.js. Atualizar README.md.
 <hr>
 
 ## Tecnologias
