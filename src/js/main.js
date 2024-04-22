@@ -2,25 +2,34 @@ function variables() {
     let lessionsList = document.querySelectorAll('.lession');
     let lessionMenu = document.querySelectorAll('.lession-menu-row');
     let lessionsCalculatorArea = document.querySelectorAll('.lession-calculator');
+    let calculatorResult = document.querySelectorAll('.calculator-result');
+    let calculatorAreas = document.querySelectorAll('.calculator-area');
     let lessionMenuButtonsList = document.querySelectorAll('.lession-menu-button');
     let lessionMenuButtonImage = document.querySelectorAll('.lession-menu-button-image');
+    let resultButtonList = document.querySelectorAll(".result-button");
+    let resetButtonList = document.querySelectorAll('.reset-button');
+    let calculatorAreaGroup = document.querySelectorAll('.calculator-result');
+    // bhaskara
     let bhaskaraResult = document.querySelectorAll(".bhaskara-result");
     let aBhaskara = document.querySelector('.bhaskara-a-number').value;
     let bBhaskara = document.querySelector('.bhaskara-b-number').value;
     let cBhaskara = document.querySelector('.bhaskara-c-number').value;
-    let resultButtonList = document.querySelectorAll(".result-button");
-    let resetButtonList = document.querySelectorAll('.reset-button');
     let bhaskaraCalculatorArea = document.getElementById('bhaskara-calculator-result');
     let delta = (bBhaskara ** 2) - (4 * [aBhaskara * cBhaskara]);
     let deltaSquareRoot = Math.sqrt(delta);
     let x1 = [(-1 * bBhaskara) + deltaSquareRoot] / 2;
     let x2 = [(-1 * bBhaskara) - deltaSquareRoot] / 2;
+    // Aritmetic Progression
+    let arithmeticProgressionResult = document.querySelector('.arithmetic-progression-calculator-result');
+    let firstNumberArithmeticProgression = document.querySelector('.first-number-arithmetic-progression').value;
+    let finalPositionArithmeticProgression = document.querySelector('.final-position-progression-arithmetic-progression').value;
+    let rasionArithmeticProgression = document.querySelector('.rasion-progression-arithmetic-progression').value;
+    let arithmeticProgressionCalculatorArea = document.querySelectorAll('.arithmetic-progression');
     
-    return { bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2, resultButtonList , resetButtonList,  bhaskaraCalculatorArea, lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsList, lessionsCalculatorArea };
+    return { bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2, resultButtonList , resetButtonList,  bhaskaraCalculatorArea, calculatorResult, lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsList, lessionsCalculatorArea, arithmeticProgressionResult, firstNumberArithmeticProgression, finalPositionArithmeticProgression, rasionArithmeticProgression, arithmeticProgressionCalculatorArea, calculatorAreas, calculatorAreaGroup };
 }
 
-var { lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsCalculatorArea, resetButtonList, bhaskaraCalculatorArea, bhaskaraResult, resultButtonList } = variables();
-
+var { lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsCalculatorArea, calculatorResult, resetButtonList, bhaskaraCalculatorArea, bhaskaraResult, resultButtonList, calculatorAreas, calculatorAreaGroup } = variables();
 for (let i = 0; i < lessionsCalculatorArea.length; i++) {
     lessionsCalculatorArea[i].style.display = 'none';
     lessionMenuButtonImage.src = "./src/images/plus-icon.png";
@@ -43,10 +52,10 @@ for (let i2 = 0; i2 < lessionMenuButtonsList.length; i2++) {
 
 for (let i = 0; i < resetButtonList.length; i++) {
     resetButtonList[i].addEventListener('click', function resetCalculator() {
-        bhaskaraCalculatorArea.style.display = 'none';
-        for (let i = 0; i < bhaskaraResult.length; i++) {
-            bhaskaraResult[i].innerText = '';
-        }
+        bhaskaraResult.forEach((paragraph) => {
+            paragraph.innerText = '';
+        });
+        calculatorAreaGroup[i].style.display = 'none';
     })    
 }
 
@@ -68,14 +77,8 @@ resultButtonList.forEach((button, i) => {
                         bhaskaraResult[bhaskaraCounting].innerText = `O valor de "c": ${cBhaskara}`;
                     break;
                     case 3:
-                        if (isNaN(aBhaskara) === true) {
-                            bhaskaraResult[bhaskaraCounting].innerText = 'Por favor insira um valor de "a" válido!';
-                            bhaskaraCounting = undefined;
-                        } else if (isNaN(bBhaskara) === true) {
-                            bhaskaraResult[bhaskaraCounting].innerText = 'Por favor insira um valor de "b" válido!';
-                            bhaskaraCounting = undefined;
-                        } else if (isNaN(cBhaskara) === true) {
-                            bhaskaraResult[bhaskaraCounting].innerText = 'Por favor insira um valor de "c" válido!';
+                        if (aBhaskara === '' || bBhaskara === '' || cBhaskara === '' || isNaN(aBhaskara) || isNaN(bBhaskara) || isNaN(cBhaskara)) {
+                            bhaskaraResult[bhaskaraCounting].innerText = 'Por favor insira números válidos!';
                             bhaskaraCounting = undefined;
                         } else {
                             bhaskaraResult[bhaskaraCounting].innerText = `Fórmula de bhaskara para calcular delta: b² - 4 . a . c`;
@@ -142,9 +145,36 @@ resultButtonList.forEach((button, i) => {
                     }                
                 }               
                 break;
-        
+            case 1:
+                var { arithmeticProgressionCalculatorArea, firstNumberArithmeticProgression, finalPositionArithmeticProgression, rasionArithmeticProgression } = variables();
+                calculatorResult[i].style.display = 'flex';
+                for(let arithmeticProgresionCouting = 0; arithmeticProgresionCouting < arithmeticProgressionCalculatorArea.length; arithmeticProgresionCouting++) {
+                    switch (arithmeticProgresionCouting) {
+                        case 0:
+                            if (firstNumberArithmeticProgression === '' || finalPositionArithmeticProgression === '' || rasionArithmeticProgression === '' || isNaN(firstNumberArithmeticProgression) || isNaN(finalPositionArithmeticProgression) || isNaN(rasionArithmeticProgression)) {
+                                arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = 'Por favor insira números válidos!';
+                                arithmeticProgresionCouting = undefined;
+                            } else {
+                                arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `Fórmula para calcular o número final de P.A.: An = a1 + (n - 1) . r`;
+                            }
+                            break;
+                        case 1:
+                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + (${finalPositionArithmeticProgression} - 1) . ${rasionArithmeticProgression}`;
+                            break;
+                        case 2:
+                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + ${finalPositionArithmeticProgression - 1} . ${rasionArithmeticProgression}`;
+                            break;
+                        case 3:
+                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + ${(finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
+                            break;
+                        case 4:
+                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `${parseInt(firstNumberArithmeticProgression) + (finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
+                            break;
+                    }
+                }
             default:
                 break;
+        
         }
     })
 });

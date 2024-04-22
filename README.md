@@ -26,7 +26,7 @@ Math Genius é um website específico para estudantes e que se tornará um aplic
 ## Melhorias
 
 #### Versão 1.0 (20/11/2023):
- Adicionado o código raíz do projeto.
+Adicionado o código raíz do projeto.
 
 #### Versão 1.1 (24/11/2023):
 Adicionado a responsividade e um erro do mobile foi resolvido.
@@ -36,6 +36,9 @@ Resolvido problema de conflito, mudar logo, atualizar README.md.
 
 #### Versão 1.3 (17/02/2024):
 Ajustes no index.html. Ajustes no style.css. Ajustes no main.js. Atualização README.md.
+
+#### Versão 1.4 (22/04/2024):
+Ajustes no index.html, style.css e main.js. Adicionado fórmula de cálculo de P.A.(Progressão Aritmética). Atualizar README.md.
 
 <hr>
 
