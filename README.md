@@ -62,7 +62,7 @@ Ajustes no main.js. Atualizar README.md.
 ## Autores
 
 ### Wesllen Araújo - Desenvolvedor Web FrontEnd
-[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WesllenAraujo)
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://www.linkedin.com/in/wesllen-ara%C3%BAjo-66327930a/)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wesllen-do-carmo-ara%C3%BAjo-0b1115276/)
 
