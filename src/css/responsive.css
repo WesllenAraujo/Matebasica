@@ -1,6 +1,7 @@
 @media(max-width:450px) {
     #header {
         padding: 1rem;
+        justify-content: center;
     }
     #header-menu {
         gap: 1rem;

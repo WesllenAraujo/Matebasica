@@ -12,7 +12,7 @@ body {
 #header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
     color: var(--cor-quinalia);
     border-bottom: solid 2px var(--cor-quinalia);
@@ -21,6 +21,9 @@ body {
 #header-menu {
     display: flex;
     gap: 5rem;
+}
+#title-logo {
+    font-size: 3rem;
 }
 .header-menu-item {
     font-size: 2rem;
@@ -33,23 +36,10 @@ body {
 .logo-image {
     width: 6rem;
 }
-#about-us {
-    padding: 1%;
-}
-.paragraph-row {
-    margin-top: 1%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 .titles {
     font-size: 3rem;
     display: block;
     text-decoration: 3px solid underline var(--cor-quinalia);
-}
-.info-description {
-    width: 40%;
-    font-size: 2rem;
 }
 #lessions-group {
     margin-top: 2rem;

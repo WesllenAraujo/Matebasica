@@ -42,7 +42,9 @@ Ajustes no index.html, style.css e main.js. Adicionado fórmula de cálculo de P
 
 #### Versão 1.5 (22/04/2024):
 Ajustes no main.js. Atualizar README.md.
-<hr>
+
+### Versão 1.6 (15/05/2024):
+Deletar section de informações. Adicionado título do site no cabeçalho e seus ajustes no tamanho e na responsividade. Atualizar README.md.
 
 ## Tecnologias
   
