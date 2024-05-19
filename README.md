@@ -46,6 +46,9 @@ Ajustes no main.js. Atualizar README.md.
 ### Versão 1.6 (15/05/2024):
 Deletar section de informações. Adicionado título do site no cabeçalho e seus ajustes no tamanho e na responsividade. Atualizar README.md.
 
+### Versão 1.7 (15/04/2024):
+Ajustes no tamanho dos títulos das lições. Atualizar README.md.
+
 ## Tecnologias
   
   ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)

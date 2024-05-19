@@ -10,29 +10,22 @@
     .logo-image {
         margin-right: 5%;
     }
-    #about-us {
-        padding: 1rem;
-    }
-    #info-title {
-        margin-bottom: 1rem;
-    }
-    .paragraph-row {
-        flex-wrap: wrap;
-        row-gap: 1rem;
-    }
-    .info-description {
-        width: 80%;
-    }
     #lessions {
         padding: 1rem;
     }
     .lession-calculator {
         width: 100%;
     }
+    .lession-title {
+        font-size: 1.8rem;
+    }
+    .calculator-title {
+        font-size: 1.5rem;
+    }
 }
 @media(max-width:380px) {
     .calculator-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .calculator-variables {
         width: 90%;
