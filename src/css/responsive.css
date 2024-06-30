@@ -10,12 +10,22 @@
     .logo-image {
         margin-right: 5%;
     }
-    #lessions {
+    .lessions {
         width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
     }
     .lession-calculator {
-        width: 100%;
+        max-width: 100%;
+    }
+    #home {
+        padding: 0;
+    }
+    .titles {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    #lessions-group {
+        padding: 0px;
     }
     .lession-title {
         font-size: 1.8rem;
@@ -26,15 +36,17 @@
     .calculator-area {
         overflow-wrap: break-word;
     }
-}
-@media(max-width:380px) {
-    .calculator-title {
-        font-size: 1.5rem;
-    }
     .calculator-variables {
         width: 90%;
     }
-    .calulator-buttons {
-        gap: 0rem;
+    .calculator-title {
+        font-size: 1.4rem;
+    }
+    .reset-button {
+        width: 10rem;
+    }
+    .variable {
+        padding: .5rem .5rem;
+        font-size: 1rem;
     }
 }
