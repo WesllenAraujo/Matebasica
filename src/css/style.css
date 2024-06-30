@@ -144,6 +144,5 @@ body {
     background-color: var(--cor-quartenaria);
 }
 .calculator-area {
-    max-width: 100%;
     overflow-wrap: break-word;
 }

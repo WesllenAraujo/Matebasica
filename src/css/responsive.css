@@ -11,6 +11,7 @@
         margin-right: 5%;
     }
     #lessions {
+        width: 100%;
         padding: 1rem;
     }
     .lession-calculator {
@@ -23,7 +24,6 @@
         font-size: 1.5rem;
     }
     .calculator-area {
-        max-width: 100%;
         overflow-wrap: break-word;
     }
 }
