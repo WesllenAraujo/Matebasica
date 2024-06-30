@@ -47,13 +47,16 @@ Ajustes no main.js. Atualizar README.md.
 Deletar section de informações. Adicionado título do site no cabeçalho e seus ajustes no tamanho e na responsividade. Atualizar README.md.
 
 ### Versão 1.7 (15/04/2024):
-Ajustes no tamanho dos títulos das lições. Atualizar README.md.
+Ajustar tamanho dos títulos das lições. Atualizar README.md.
 
 ### Versão 1.8 (29/06/2024):
 Mudar logo do site. Atualizar README.md.
 
 ### Versão 1.9 (30/06/2024):
 Adicionar função de soma de P.A.. Atualizar README.md.
+
+### Versão 2.0 (30/06/2024):
+Corrigir largura da soma de P.A. em dispostivios mobile. Atualizar README.md.
 
 ## Tecnologias
   
