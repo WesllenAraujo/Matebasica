@@ -22,6 +22,10 @@
     .calculator-title {
         font-size: 1.5rem;
     }
+    .calculator-area {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
 }
 @media(max-width:380px) {
     .calculator-title {
