@@ -52,6 +52,9 @@ Ajustes no tamanho dos títulos das lições. Atualizar README.md.
 ### Versão 1.8 (29/06/2024):
 Mudar logo do site. Atualizar README.md.
 
+### Versão 1.9 (30/06/2024):
+Adicionar função de soma de P.A.. Atualizar README.md.
+
 ## Tecnologias
   
   ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)

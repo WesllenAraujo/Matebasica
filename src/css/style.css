@@ -107,6 +107,12 @@ body {
     flex-direction: column;
     row-gap: 2rem;
 }
+.calculator-variables-checkbox-group {
+    display: flex;
+}
+.variables-checkbox {
+    width: 3rem;
+}
 .variable {
     padding: .2rem;
     border-radius: .5rem;
@@ -136,4 +142,8 @@ body {
     flex-direction: column;
     row-gap: 1rem;
     background-color: var(--cor-quartenaria);
+}
+.calculator-area {
+    max-width: 100%;
+    overflow-wrap: break-word;
 }

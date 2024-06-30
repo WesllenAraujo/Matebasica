@@ -20,13 +20,24 @@ function variables() {
     let x1 = [(-1 * bBhaskara) + deltaSquareRoot] / 2;
     let x2 = [(-1 * bBhaskara) - deltaSquareRoot] / 2;
     // Aritmetic Progression
-    let arithmeticProgressionResult = document.querySelector('.arithmetic-progression-calculator-result');
-    let firstNumberArithmeticProgression = document.querySelector('.first-number-arithmetic-progression').value;
-    let finalPositionArithmeticProgression = document.querySelector('.final-position-progression-arithmetic-progression').value;
-    let rasionArithmeticProgression = document.querySelector('.rasion-progression-arithmetic-progression').value;
-    let arithmeticProgressionCalculatorArea = document.querySelectorAll('.arithmetic-progression');
+    let paResult = document.querySelector('.pa-calculator-result');
+    let paFirstNumber = document.querySelector('.first-number-pa').value;
+    let paFinalPosition = document.querySelector('.final-position-pa').value;
+    let paRasion = document.querySelector('.rasion-pa').value;
+    let paCalculatorArea = document.querySelectorAll('.pa-calculator-area');
+    // Arithmetic Progression addiction
+    let paAddition = document.getElementById('pa-addition');
     
-    return { bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2, resultButtonList , resetButtonList,  bhaskaraCalculatorArea, calculatorResult, lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsList, lessionsCalculatorArea, arithmeticProgressionResult, firstNumberArithmeticProgression, finalPositionArithmeticProgression, rasionArithmeticProgression, arithmeticProgressionCalculatorArea, calculatorAreas, calculatorAreaGroup };
+    return {
+        // Calculate
+        resultButtonList , resetButtonList, calculatorResult, lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsList, lessionsCalculatorArea, calculatorAreas, calculatorAreaGroup,
+        // Bhaskara
+        bhaskaraResult, aBhaskara, bBhaskara, cBhaskara, delta, deltaSquareRoot, x1, x2,  bhaskaraCalculatorArea, 
+        // Arithmetic Progression
+         paResult, paFirstNumber, paFinalPosition, paRasion, paCalculatorArea, 
+        // Arithmetic Progression addition
+        paAddition
+    };
 }
 
 var { lessionMenuButtonsList, lessionMenu, lessionMenuButtonImage, lessionsCalculatorArea, calculatorResult, resetButtonList, bhaskaraCalculatorArea, bhaskaraResult, resultButtonList, calculatorAreas, calculatorAreaGroup } = variables();
@@ -146,35 +157,74 @@ resultButtonList.forEach((button, i) => {
                 }               
                 break;
             case 1:
-                var { arithmeticProgressionCalculatorArea, firstNumberArithmeticProgression, finalPositionArithmeticProgression, rasionArithmeticProgression } = variables();
+                var { paCalculatorArea, paFirstNumber, paFinalPosition, paRasion, paAddition } = variables();
                 calculatorResult[i].style.display = 'flex';
-                for(let arithmeticProgresionCouting = 0; arithmeticProgresionCouting < arithmeticProgressionCalculatorArea.length; arithmeticProgresionCouting++) {
-                    switch (arithmeticProgresionCouting) {
+                for(let paCounting = 0; paCounting < paCalculatorArea.length; paCounting++) {
+                    switch (paCounting) {
                         case 0:
-                            if (firstNumberArithmeticProgression === '' || finalPositionArithmeticProgression === '' || rasionArithmeticProgression === '' || isNaN(firstNumberArithmeticProgression) || isNaN(finalPositionArithmeticProgression) || isNaN(rasionArithmeticProgression)) {
-                                arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = 'Por favor insira números válidos!';
-                                arithmeticProgresionCouting = undefined;
+                            if (paFirstNumber === '' || paFinalPosition === '' || paRasion === '' || isNaN(paFirstNumber) || isNaN(paFinalPosition) || isNaN(paRasion)) {
+                                paCalculatorArea[paCounting].innerText = 'Por favor insira números válidos!';
+                                paCounting = undefined;
                             } else {
-                                arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `Fórmula para calcular o número final de P.A.: An = a1 + (n - 1) . r`;
+                                paCalculatorArea[paCounting].innerText = `Fórmula para calcular o número final de P.A.: An = a1 + (n - 1) . r`;
                             }
                             break;
                         case 1:
-                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + (${finalPositionArithmeticProgression} - 1) . ${rasionArithmeticProgression}`;
+                            paCalculatorArea[paCounting].innerText = `An = ${paFirstNumber} + (${paFinalPosition} - 1) . ${paRasion}`;
                             break;
                         case 2:
-                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + ${finalPositionArithmeticProgression - 1} . ${rasionArithmeticProgression}`;
+                            paCalculatorArea[paCounting].innerText = `An = ${paFirstNumber} + ${paFinalPosition - 1} . ${paRasion}`;
                             break;
                         case 3:
-                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${firstNumberArithmeticProgression} + ${(finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
+                            paCalculatorArea[paCounting].innerText = `An = ${paFirstNumber} + ${(paFinalPosition - 1) * paRasion}`;
                             break;
                         case 4:
-                            arithmeticProgressionCalculatorArea[arithmeticProgresionCouting].innerText = `An = ${parseInt(firstNumberArithmeticProgression) + (finalPositionArithmeticProgression - 1) * rasionArithmeticProgression}`;
+                            paCalculatorArea[paCounting].innerText = `An = ${parseInt(paFirstNumber) + (paFinalPosition - 1) * paRasion}`;
                             break;
+                        case 5:
+                            if (paAddition.checked === true) {
+                                paCalculatorArea[paCounting].innerText = "Cálculo da soma da P.A.:"
+                            } else {
+                                paCounting = undefined;
+                            }
+                            break;
+                        case 6:
+                            let PAList = calculatePA(Number(paFirstNumber), Number(paFinalPosition), Number(paRasion))
+                            let paAdditionResult = PAAddition(PAList);
+                            writePA(paCalculatorArea[paCounting], PAList, paAdditionResult);
                     }
                 }
             default:
                 break;
-        
         }
     })
 });
+function calculatePA(a1, n, r) {
+    const pa = [];
+    for(let i = 0; i < n; i++) {
+        const termo = a1 + i * r;
+        pa.push(termo);
+    }
+    return pa;
+}
+function PAAddition(PAList) {
+    let i = 0;
+    let result = 0;
+    while(i < PAList.length) {
+        result = result + PAList[i];
+        i++;
+    }
+    return result;
+}
+function writePA(paragraph, PAList, result) {
+    let i = 0;
+    paragraph.innerText = ''
+    while (i < PAList.length) {
+        if (i === PAList.length - 1) {
+            paragraph.innerText += PAList[i] + ` = ${result}`;
+        } else {
+            paragraph.innerText += PAList[i] + '+ ';
+        }
+        i++
+    }
+}
