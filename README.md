@@ -61,6 +61,9 @@ Corrigir largura da soma de P.A. em dispostivios mobile. Atualizar README.md.
 ### Versão 2.1 (30/06/2024):
 Ajustar responsividade. Atualizar README.md.
 
+### Versão 2.1 (30/06/2024):
+Ajustar função de calcular soma de P.A.. Atualizar README.md.
+
 ## Tecnologias
   
   ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)

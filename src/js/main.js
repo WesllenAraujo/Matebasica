@@ -189,9 +189,17 @@ resultButtonList.forEach((button, i) => {
                             }
                             break;
                         case 6:
-                            let PAList = calculatePA(Number(paFirstNumber), Number(paFinalPosition), Number(paRasion))
-                            let paAdditionResult = PAAddition(PAList);
-                            writePA(paCalculatorArea[paCounting], PAList, paAdditionResult);
+                            paCalculatorArea[paCounting].innerText = `S${paFinalPosition} = (${paFirstNumber} + ${paLastNumber()}) . ${paFinalPosition} / 2`;
+                            break;
+                        case 7:
+                            paCalculatorArea[paCounting].innerText = `S${paFinalPosition} = ${parseInt(paFirstNumber) + paLastNumber()} . ${paFinalPosition} / 2`;
+                            break;
+                        case 8:
+                            paCalculatorArea[paCounting].innerText = `S${paFinalPosition} = ${(parseInt(paFirstNumber) + paLastNumber()) * paFinalPosition} / 2`;
+                            break;
+                        case 9:
+                            paCalculatorArea[paCounting].innerText = `S${paFinalPosition} = ${[(parseInt(paFirstNumber) + paLastNumber()) * paFinalPosition] / 2}`;
+                            break;
                     }
                 }
             default:
@@ -199,32 +207,8 @@ resultButtonList.forEach((button, i) => {
         }
     })
 });
-function calculatePA(a1, n, r) {
-    const pa = [];
-    for(let i = 0; i < n; i++) {
-        const termo = a1 + i * r;
-        pa.push(termo);
-    }
-    return pa;
-}
-function PAAddition(PAList) {
-    let i = 0;
-    let result = 0;
-    while(i < PAList.length) {
-        result = result + PAList[i];
-        i++;
-    }
-    return result;
-}
-function writePA(paragraph, PAList, result) {
-    let i = 0;
-    paragraph.innerText = ''
-    while (i < PAList.length) {
-        if (i === PAList.length - 1) {
-            paragraph.innerText += PAList[i] + ` = ${result}`;
-        } else {
-            paragraph.innerText += PAList[i] + '+ ';
-        }
-        i++
-    }
+function paLastNumber() {
+    var {paFirstNumber, paFinalPosition, paRasion} = variables();
+    let PALastNumber = parseInt(paFirstNumber) + (paFinalPosition - 1) * paRasion;
+    return PALastNumber;
 }
