@@ -40,9 +40,10 @@ body {
     font-size: 3rem;
     display: block;
     text-decoration: 3px solid underline var(--cor-quinalia);
+    padding: 0 0 0 2rem;
 }
-#lessions-group {
-    margin-top: 2rem;
+.lessions-group {
+    margin-top: .5rem;
     padding: 1rem;
 }
 .lessions {

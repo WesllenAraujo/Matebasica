@@ -27,6 +27,12 @@ function variables() {
     let paCalculatorArea = document.querySelectorAll('.pa-calculator-area');
     // Arithmetic Progression addiction
     let paAddition = document.getElementById('pa-addition');
+    // Aceleration
+    let initionalSpeed = document.querySelector('.initional-speed').value;
+    let finalSpeed = document.querySelector('.final-speed').value;
+    let initionalTime = document.querySelector('.initional-time').value;
+    let finalTime = document.querySelector('.final-time').value;
+    let acelerationCalculatorArea = document.querySelectorAll('.aceleration-result');
     
     return {
         // Calculate
@@ -36,7 +42,9 @@ function variables() {
         // Arithmetic Progression
          paResult, paFirstNumber, paFinalPosition, paRasion, paCalculatorArea, 
         // Arithmetic Progression addition
-        paAddition
+        paAddition,
+        // Aceleration
+        initionalSpeed, finalSpeed, initionalTime, finalTime, acelerationCalculatorArea
     };
 }
 
@@ -151,7 +159,7 @@ resultButtonList.forEach((button, i) => {
                         bhaskaraResult[bhaskaraCounting].innerText = `x2 = ${x2}`;
                         break;
                         default:
-                            bhaskaraResult[bhaskaraCounting].innerText = 'Ocorreu um erro inesperado. Por favor, tente novamente.'
+                            bhaskaraResult[bhaskaraCounting].innerText = 'Ocorreu um erro inesperado. Por favor, tente novamente.';
                             break;
                     }                
                 }               
@@ -199,6 +207,55 @@ resultButtonList.forEach((button, i) => {
                             break;
                         case 9:
                             paCalculatorArea[paCounting].innerText = `S${paFinalPosition} = ${[(parseInt(paFirstNumber) + paLastNumber()) * paFinalPosition] / 2}`;
+                            break;
+                        default:
+                            paCalculatorArea[paCounting].innerText = 'Ocorreu um erro inesperado. Por favor, tente novamente.';
+                        break;
+                    }
+                }
+                break;
+            case 2:
+                calculatorResult[i].style.display = 'flex';
+                var { initionalSpeed, finalSpeed, initionalTime, finalTime, acelerationCalculatorArea } = variables();
+                for (let acelerationCount = 0; acelerationCount < acelerationCalculatorArea.length; acelerationCount++) {
+                    switch (acelerationCount) {
+                        case 0:
+                            if (initionalSpeed === '' || finalSpeed === '' || initionalTime === '' || finalTime === '' || isNaN(initionalSpeed) || isNaN(finalSpeed) || isNaN(initionalTime) || isNaN(finalTime)) {
+                                acelerationCalculatorArea[acelerationCount].innerText = 'Por favor insira números válidos!';
+                                acelerationCount = undefined;
+                            } else {
+                                acelerationCalculatorArea[acelerationCount].innerText = `Dados:`;
+                            }
+                            break;
+                        case 1:
+                                acelerationCalculatorArea[acelerationCount].innerText = `Obs.: "a" = Aceleração; "Δv" = Variação da velociadade = Velocidade final - Velocidade inicial; "Δt" = Variação do tempo = Tempo final - Tempo inicial. `;
+                                break;
+                        case 2:
+                                acelerationCalculatorArea[acelerationCount].innerText = `Fórmula: a = Δv / Δt`;
+                                break;
+                        case 3:
+                                acelerationCalculatorArea[acelerationCount].innerText = `a = Δv / Δt`;
+                                break;
+                        case 4:
+                                acelerationCalculatorArea[acelerationCount].innerText = `Δv = ${finalSpeed} - ${initionalSpeed}`;
+                                break;
+                        case 5: 
+                                acelerationCalculatorArea[acelerationCount].innerText = `Δt = ${finalTime} - ${initionalTime}`;
+                                break;
+                        case 6:
+                                acelerationCalculatorArea[acelerationCount].innerText = `Δv = ${finalSpeed - initionalSpeed}`;
+                                break;
+                        case 7:
+                                acelerationCalculatorArea[acelerationCount].innerText = `Δt = ${finalTime - initionalTime}`;
+                                break;
+                        case 8:
+                                acelerationCalculatorArea[acelerationCount].innerText = `a = ${finalSpeed - initionalSpeed} / ${finalTime - initionalTime}`;
+                                break;
+                        case 9:
+                                acelerationCalculatorArea[acelerationCount].innerText = `a = ${[(finalSpeed - initionalSpeed) / (finalTime - initionalTime)]}`;
+                                break;
+                        default:
+                            acelerationCalculatorArea[acelerationCount].innerText = 'Ocorreu um erro inesperado. Por favor, tente novamente.';
                             break;
                     }
                 }
