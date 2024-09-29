@@ -67,6 +67,9 @@ Ajustar função de calcular soma de P.A.. Atualizar README.md.
 ### Versão 2.2 (17/08/2024):
 Adicionar fórumula de aceleração(Cinemática). Atualizar README.md.
 
+### Versão 2.3 (17/08/2024):
+Troca de nome do projeto. Atualizar README.md.
+
 ## Tecnologias
   
   ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
