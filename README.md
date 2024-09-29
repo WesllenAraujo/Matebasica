@@ -1,6 +1,6 @@
-# Math Genius
+# Matebásica
 
-Math Genius é um website específico para estudantes e que se tornará um aplicativo no futuro, onde esse projeto é uma calculadora que calcula formulas matemáticas exibindo o cálculo para o usuário.
+Matebásica é um website específico para estudantes e que se tornará um aplicativo no futuro, onde esse projeto é uma calculadora que calcula formulas matemáticas exibindo o cálculo para o usuário.
 
 <hr>
 
